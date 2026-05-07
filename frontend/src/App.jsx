@@ -22,7 +22,7 @@ function App() {
   async function addEmployee() {
 
     await axios.post(
-      "http://localhost:5000/employees",
+      "https://employee-management-system-mape.onrender.com/employees",
       form
     );
 
@@ -39,7 +39,7 @@ function App() {
   async function getEmployees() {
 
     const res = await axios.get(
-      "http://localhost:5000/employees"
+      "https://employee-management-system-mape.onrender.com/employees"
     );
 
     setEmployees(res.data);
@@ -48,7 +48,7 @@ function App() {
   async function deleteEmployee(id) {
 
     await axios.delete(
-      `http://localhost:5000/employees/${id}`
+      `https://employee-management-system-mape.onrender.com/employees/${id}`
     );
 
     getEmployees();
