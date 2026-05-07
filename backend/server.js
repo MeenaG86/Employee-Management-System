@@ -19,7 +19,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://yourfrontend.vercel.app"
+    "https://employee-management-system-virid-alpha.vercel.app"
   ]
 }));
 app.use(express.json());
@@ -43,7 +43,7 @@ app.post("/employees", async (req, res) => {
   }
 });
 
-app.post("/employees", async(req,res)=>{
+/*app.post("/employees", async(req,res)=>{
   await Employee.create({
     name:"Meena",
     email:"meena@gmail.com",
@@ -52,7 +52,7 @@ app.post("/employees", async(req,res)=>{
   })
 
   res.send("Added")
-})
+})*/g
 
 // READ
 app.get("/employees", async (req, res) => {
