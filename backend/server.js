@@ -3,14 +3,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-mongoose.connect(process.env.MONGO_URL)
-.then(() => {
-  console.log("MongoDB Connected");
-})
-.catch((err) => {
-  console.log(err);
-});
-
 const Employee = require("./models/Employee");
 
 const app = express();
